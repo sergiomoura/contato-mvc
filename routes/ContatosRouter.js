@@ -9,7 +9,7 @@ const router = express.Router();
 
 // Pede para o roteador definir uma rota: (método: get, endereço: /contatos)
 router.get('/contatos', ContatosController.listarContatos);
-router.get('/contatos/create',ContatosController.mostrarTelaDeCadastro)
+router.get('/contatos/:id', ContatosController.capturarContato);
 
 // Exportar o roteador
 module.exports = router;
