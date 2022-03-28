@@ -9,7 +9,7 @@ module.exports = {
         let contatos = require(`../database/contatos_${uid}.json`);
 
         // Enviando a view para o cliente
-        res.render('home.ejs');
+        res.render('home.ejs',{contatos: contatos});
 
     },
 

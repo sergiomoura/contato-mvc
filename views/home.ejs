@@ -321,6 +321,7 @@
 </head>
 
 <body>
+
     <nav>
         <ul>
             <li class="selected"><a>Home</a></li>
@@ -333,47 +334,22 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <h3>Nome do Contato</h3>
-            <div>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-            </div>
-            <ul>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-            </ul>
-            <a href="#">Editar</a>
-        </section>
-        <section>
-            <h3>Nome do Contato</h3>
-            <div>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-            </div>
-            <ul>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-            </ul>
-            <a href="#">Editar</a>
-        </section>
-        <section>
-            <h3>Nome do Contato</h3>
-            <div>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-                <a href="mailto:email@docontato.com">email@docontato.com</a>
-            </div>
-            <ul>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-                <li><a href="tel:9999999999">99999 - 9999</a></li>
-            </ul>
-            <a href="#">Editar</a>
-        </section>
-
+        <% for(let c of contatos) { %>
+            <section>
+                <h3><%= c.nome %></h3>
+                <div>
+                    <% for(let e of c.email) %>
+                    <a href="mailto:lalala">Lalala</a>
+                    <% } %>
+                </div>
+                <ul>
+                    <li><a href="tel:9999999999">99999 - 9999</a></li>
+                    <li><a href="tel:9999999999">99999 - 9999</a></li>
+                    <li><a href="tel:9999999999">99999 - 9999</a></li>
+                </ul>
+                <a href="/contatos/<%= c.id %>">Editar</a>
+            </section>
+        <% } %>
     </main>
 
     <div id="modal">
