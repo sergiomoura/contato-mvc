@@ -8,8 +8,8 @@ module.exports = {
         // Importar os contatos do usuário:
         let contatos = require(`../database/contatos_${uid}.json`);
 
-        // Enviando os contatos para o cliente
-        res.send(contatos);
+        // Enviando a view para o cliente
+        res.render('home.ejs');
 
     },
 
