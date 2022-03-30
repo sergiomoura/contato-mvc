@@ -1,20 +1,38 @@
 [
     {
         "id": 1,
-        "nome":"Naruto Uzumaki",
-        "email":"naruto@teste.com",
-        "senha":"$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+        "nome": "Naruto Uzumaki",
+        "email": "naruto@teste.com",
+        "senha": "$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
     },
     {
         "id": 2,
-        "nome":"Sasuke Uchiha",
-        "email":"sasuke@teste.com",
-        "senha":"$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+        "nome": "Sasuke Uchiha",
+        "email": "sasuke@teste.com",
+        "senha": "$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
     },
     {
-        "id": 3,
-        "nome":"Sakura Haruno",
-        "email":"sakura@teste.com",
-        "senha":"$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+        "id": 1000,
+        "nome": "Sakura Haruno",
+        "email": "sakura@teste.com",
+        "senha": "$2b$10$f9ElcnNIDjjG6GDx/qX8VOepwk7bPB.I01tEiwA9OSR7AJptx6KtW"
+    },
+    {
+        "id": 1001,
+        "nome": "Mariana",
+        "email": "mariana@teste.com",
+        "senha": "$2b$10$HDtGvs3NTGCvYGwBvslycekuad7sM7OyU/xIukP1/Cd76JYN3c7kC"
+    },
+    {
+        "id": 1002,
+        "nome": "Pedro",
+        "email": "pedro@teste.com",
+        "senha": "$2b$10$1olyVgEMYMcKe6h1t.3oTewT3Js4xmVQ5JaiY1DSd9RBp1y4eozuy"
+    },
+    {
+        "id": 1003,
+        "nome": "Teste",
+        "email": "teste@teste.com",
+        "senha": "$2b$10$1qbgAn9cu0fI58Pbv2WSKuuiWdy/a6ssSiaVH7RyH8Bz/a65k3ww6"
     }
 ]
