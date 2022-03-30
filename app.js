@@ -2,6 +2,7 @@
 const express = require('express');
 
 // Importar os roteadores
+const UsuariosRouter = require('./routes/UsuariosRouter');
 const ContatosRouter = require('./routes/ContatosRouter');
 
 // Criar um servidor/aplicação com o express
@@ -16,6 +17,7 @@ app.get('/', (req, res)=>{
 });
 
 // Usando os roteadores
+app.use('/', UsuariosRouter);
 app.use('/', ContatosRouter);
 
 // Levantar/rodar/executar a nossa aplicação
