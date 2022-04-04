@@ -1,0 +1,10 @@
+☐ Como exibir uma página com MVC (página de registro)
+
+☐ Pastore: Uso do contatos.find
+    // Encontrar no array de contatos o contato que tem o id desejado.
+    let contato = contatos.find(
+        (c) => {
+            return c.id == idDoContato;
+        }
+    );
+☐ 

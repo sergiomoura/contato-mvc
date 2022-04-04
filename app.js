@@ -5,6 +5,9 @@ const express = require('express');
 const UsuariosRouter = require('./routes/UsuariosRouter');
 const ContatosRouter = require('./routes/ContatosRouter');
 
+// Importar os middlewares
+const marcaEntradaDaRequisicao = require('./middlewares/marcaEntradaDeRequisicao');
+
 // Criar um servidor/aplicação com o express
 const app = express();
 
@@ -13,6 +16,9 @@ app.set('view engine','ejs');
 
 // Configurando a pasta public para arquivos estáticos
 app.use(express.static('public'));
+
+// Aplicando middleware globais
+app.use(marcaEntradaDaRequisicao);
 
 // Criar rota get no endereço '/' para responder requisição com msg "olá"
 app.get('/', (req, res)=>{
