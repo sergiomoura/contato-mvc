@@ -14,6 +14,10 @@ const app = express();
 // Configurar o EJS como seu template engine
 app.set('view engine','ejs');
 
+// Configura o req.body para conter as informações
+// digitadas pelo usuário no formulário
+app.use(express.urlencoded({ extended: false }));
+
 // Configurando a pasta public para arquivos estáticos
 app.use(express.static('public'));
 
