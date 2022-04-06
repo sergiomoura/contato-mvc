@@ -1,5 +1,6 @@
-// Importar o express
+// Importar dependências
 const express = require('express');
+const session = require('express-session');
 
 // Importar os roteadores
 const UsuariosRouter = require('./routes/UsuariosRouter');
@@ -20,6 +21,14 @@ app.use(express.urlencoded({ extended: false }));
 
 // Configurando a pasta public para arquivos estáticos
 app.use(express.static('public'));
+
+// Configurando o uso da session
+app.use(session({
+    secret:"segredo",
+    resave: false,
+    saveUninitialized: false
+}))
+
 
 // Aplicando middleware globais
 app.use(marcaEntradaDaRequisicao);
