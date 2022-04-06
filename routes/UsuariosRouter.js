@@ -11,6 +11,7 @@ const router = express.Router();
 router.get('/registrar', UsuariosController.showRegistrar);
 router.post('/usuarios', UsuariosController.store);
 router.get('/login', UsuariosController.mostrarLogin);
+router.post('/login', UsuariosController.login);
 
 // Exportar o roteador para uso externo.
 module.exports = router;

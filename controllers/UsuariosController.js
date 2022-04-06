@@ -39,5 +39,33 @@ module.exports = {
     },
     mostrarLogin: (req,res) => {
         res.render('login.ejs')
+    },
+    login: (req, res) => {
+
+        // Extrair/Capturar o email e a senha digitadas pelo usuário
+        let {email, senha} = req.body;
+        /**
+         * Equivale a:
+         * let email = req.body.email;
+         * let senha = req.body.senha;
+         */
+
+
+        // Carregar o meu array de usuários
+        const usuarios = require('../database/usuarios.json');
+
+        // Veririficar se o email existe e se a senha deste email confere.
+        // res.send({email, senha, usuarios});
+        usuarios.find(
+            
+            u => u.email == email && bcrypt.compareSync(senha,u.senha)
+        
+        )
+
+
+        // Se o usuário não for encontrado ou senha for inválida, mandar erro.
+        // Se o usuário OK: - Setar session do usuário
+        //                  - redirecionar o usuário para a tela que lista contatos
+
     }
 }
