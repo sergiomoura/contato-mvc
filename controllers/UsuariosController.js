@@ -36,5 +36,8 @@ module.exports = {
 
         // Direcionando o usuário para a rota GET /contatos
         res.redirect('/contatos');
+    },
+    mostrarLogin: (req,res) => {
+        res.render('login.ejs')
     }
 }
