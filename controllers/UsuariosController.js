@@ -56,16 +56,23 @@ module.exports = {
 
         // Veririficar se o email existe e se a senha deste email confere.
         // res.send({email, senha, usuarios});
-        usuarios.find(
-            
+        let usuario = usuarios.find(
             u => u.email == email && bcrypt.compareSync(senha,u.senha)
-        
         )
 
+        if(usuario === undefined){
+            // Se o usuário não for encontrado ou senha for inválida,
+            // Mandar view de login, com dados para mostrar o erro.
+            return res.render("login.ejs", {erro:1,email,senha});
+        } 
+        
+        // Se o usuário OK: 
+        // - Setar session do usuário
+        req.session.usuario = usuario;
 
-        // Se o usuário não for encontrado ou senha for inválida, mandar erro.
-        // Se o usuário OK: - Setar session do usuário
-        //                  - redirecionar o usuário para a tela que lista contatos
+        // - redirecionar o usuário para a tela que lista contatos
+        res.redirect("/contatos");
+
 
     }
 }
