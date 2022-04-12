@@ -1,5 +1,4 @@
 // TODO: Supondo que o usuário é o de uid=1
-let uid = 3;
 
 module.exports = (req, res, next) => {
 
@@ -7,7 +6,7 @@ module.exports = (req, res, next) => {
     const usuarios = require('../database/usuarios.json');
 
     // Capturar o usuário de id==uid
-    const usuario = usuarios.find(u => u.id == uid);
+    const usuario = usuarios.find(u => u.id == req.usuario.id);
 
     // Verificar se o usuario é adimplente
     if(usuario.adimplente){

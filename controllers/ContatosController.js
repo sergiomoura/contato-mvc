@@ -1,12 +1,12 @@
 // Para testes, assumindo que o usuário logado é o usuário de id=1;
-const uid = 1;
+// const uid = 1;
 
 module.exports = {
 
     listarContatos: (req, res)=>{
 
         // Importar os contatos do usuário:
-        let contatos = require(`../database/contatos_${uid}.json`);
+        let contatos = require(`../database/contatos_${req.usuario.id}.json`);
 
         // Enviando a view para o cliente
         res.render('home.ejs',{contatos: contatos});
@@ -16,7 +16,7 @@ module.exports = {
     capturarContato: (req, res) => {
 
         // Importar os contatos do usuário:
-        let contatos = require(`../database/contatos_${uid}.json`);
+        let contatos = require(`../database/contatos_${req.usuario.id}.json`);
 
         // Descobrir o ID do contato que o usuário quer...
         let idDoContato = req.params.id;
