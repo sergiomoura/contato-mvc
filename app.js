@@ -23,12 +23,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 // Configurando o uso da session
+// Pega a chave no Cookie da requisição e verifica se tem informações associadas a essa chave
+// Se houver essas informações e guarda no req.session
 app.use(session({
     secret:"segredo",
     resave: false,
     saveUninitialized: false
 }))
-
 
 // Aplicando middleware globais
 app.use(marcaEntradaDaRequisicao);
