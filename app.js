@@ -1,11 +1,17 @@
 // Importando express
 const express = require('express');
 
+// Importando roteadores
+const UsuariosRouter = require("./routers/UsuariosRouter");
+
 // Criando servidor e armazenando em app
 const app = express();
 
-// Criando rota get para '/' que responde "Olá"
-app.get('/',(_req,res)=>{res.send("Olá!")});
+// Configurando o ejs como template engine
+app.set('view engine','ejs');
+
+// Roteadores
+app.use('/', UsuariosRouter);
 
 // Rodando o servidor
 app.listen(3000, ()=>{
