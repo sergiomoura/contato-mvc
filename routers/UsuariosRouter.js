@@ -7,6 +7,6 @@ const router = express.Router();
 
 // Criando rota get para '/registrar'
 router.get('/registrar', UsuariosController.renderCriarUsuario);
-
+router.post('/usuarios', UsuariosController.criarUsuario);
 // Exportando o roteador
 module.exports = router;
