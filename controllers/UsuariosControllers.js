@@ -40,5 +40,8 @@ module.exports = {
 
         // Redirecionando o usuário para a rota /contatos
         res.send(usuario);
+    },
+    renderLogin: (req, res) => {
+        res.render('login.ejs');
     }
 }
