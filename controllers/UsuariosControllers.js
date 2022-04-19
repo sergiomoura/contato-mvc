@@ -43,5 +43,30 @@ module.exports = {
     },
     renderLogin: (req, res) => {
         res.render('login.ejs');
+    },
+    login: (req, res) => {
+
+        // Capturando email e senha digitados pelo usuário
+        const {email, senha} = req.body;
+
+        // Carregando array de usuários
+        const usuarios = require('../database/usuarios.json');
+
+        // Buscando usuário com o email digitado pelo visitante
+        const usuario = usuarios.find( u => u.email == email)
+
+        // Caso não encontre nenhum usuário, renderizando a view de login
+        if(usuario == undefined){
+            return res.render('login.ejs',{erro:1, email, senha});
+        }
+
+        // Validando a senha do usuário
+        if(!bcrypt.compareSync(senha,usuario.senha)){
+            return res.render('login.ejs',{erro:1, email, senha});
+        }
+
+        // Respondendo mensagem de sucesso para o visitante
+        res.send("Login Ok");
+
     }
 }
