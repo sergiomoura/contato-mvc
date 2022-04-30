@@ -70,5 +70,11 @@
         "email": "teste2@teste.com",
         "nome": "Teste 2",
         "senha": "$2b$10$MRw27DB80TZRYqOaIUzm7uUiyauR6Qlo7M5eGh33v/f3bHB4xfalK"
+    },
+    {
+        "id": 13,
+        "email": "ataulfo@goncalves.com",
+        "nome": "Ataúlfo Gonçalves",
+        "senha": "$2b$10$vdPgi62/3gkH.4/BdonY6.74FzneKaU2chU6E0kbShDQCfuTJyVGu"
     }
 ]

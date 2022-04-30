@@ -38,8 +38,12 @@ module.exports = {
         // Salvando array de usuários depois de acrescido o novo
         fs.writeFileSync(path.join(__dirname,'/../database/usuarios.json'), JSON.stringify(usuarios, null, 4))
 
-        // Redirecionando o usuário para a rota /contatos
-        res.send(usuario);
+        // Criando session
+        req.session.usuario = usuario;
+
+        // Redirecionando visitante para a rota get /contatos
+        res.redirect('/contatos');
+        
     },
     renderLogin: (req, res) => {
         res.render('login.ejs', {erro: 0, email:"", senha: ""});
