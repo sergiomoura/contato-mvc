@@ -3,6 +3,7 @@ const express = require('express');
 
 // Importando roteadores
 const UsuariosRouter = require("./routers/UsuariosRouter");
+const ContatosRouter = require("./routers/ContatosRouter");
 
 // Criando servidor e armazenando em app
 const app = express();
@@ -15,6 +16,7 @@ app.set('view engine','ejs');
 
 // Roteadores
 app.use('/', UsuariosRouter);
+app.use('/', ContatosRouter);
 
 // Rodando o servidor
 app.listen(3000, ()=>{
