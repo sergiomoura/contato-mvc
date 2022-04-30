@@ -65,8 +65,11 @@ module.exports = {
             return res.render('login.ejs',{erro:1, email, senha});
         }
 
-        // Respondendo mensagem de sucesso para o visitante
-        res.send("Login Ok");
+        // Criando a session usuario
+        req.session.usuario = usuario;
+
+        // Redirecionando o visitante para o endereço /contatos
+        res.redirect('/contatos');
 
     }
 }
