@@ -42,7 +42,7 @@ module.exports = {
         res.send(usuario);
     },
     renderLogin: (req, res) => {
-        res.render('login.ejs');
+        res.render('login.ejs', {erro: 0, email:"", senha: ""});
     },
     login: (req, res) => {
 

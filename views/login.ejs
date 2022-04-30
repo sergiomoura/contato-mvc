@@ -151,6 +151,15 @@
             justify-content: center;
             align-items: center;
         }
+
+        .erro {
+            width: 700px;
+            background-color: rgba(255, 0, 0, 0.4);
+            color: #FF0;
+            padding: 10px;
+            margin: -70px auto;
+            text-align: center;
+        }
     </style>
 
     <title>Contatos</title>
@@ -158,15 +167,16 @@
 </head>
 
 <body>
+    
     <form method="POST" action="/login">
         <div>
             <label>
                 E-mail
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" value="<%= email %>">
             </label>
             <label>
                 Senha
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha" value="<%= senha %>">
             </label>
             <div class="controles">
                 <button class="link">Esqueci minha senha</button>
@@ -177,6 +187,9 @@
             <a href="registrar">Registre-se</a>
         </div>
     </form>
+    <% if(erro){ %>
+    <div class="erro">Falha no login</div>
+    <% } %>
 </body>
 
 </html>
