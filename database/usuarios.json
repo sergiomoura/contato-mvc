@@ -76,5 +76,11 @@
         "email": "ataulfo@goncalves.com",
         "nome": "Ataúlfo Gonçalves",
         "senha": "$2b$10$vdPgi62/3gkH.4/BdonY6.74FzneKaU2chU6E0kbShDQCfuTJyVGu"
+    },
+    {
+        "id": 14,
+        "email": "mangabeira@teste.com",
+        "nome": "Mangabeira",
+        "senha": "$2b$10$aR0O2NTUeRX7TSXfNHy./e/uOYJkiSftkjUqqSQpamMImCt5otkoC"
     }
 ]

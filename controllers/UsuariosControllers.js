@@ -41,9 +41,12 @@ module.exports = {
         // Criando session
         req.session.usuario = usuario;
 
+        // Criando arquivo de contatos do usuário
+        fs.writeFileSync(path.join(__dirname,`/../database/contatos_${idNovo}.json`),'[]');
+
         // Redirecionando visitante para a rota get /contatos
         res.redirect('/contatos');
-        
+
     },
     renderLogin: (req, res) => {
         res.render('login.ejs', {erro: 0, email:"", senha: ""});
